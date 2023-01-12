@@ -167,11 +167,11 @@ int V4l2Device::checkCapAbilities(int fd, uint32_t mandatoryCapabilities)
 	}
 	return 0;
 }
+
 /** @brief config device capture format 
  *	@param fd: File descriptor
  *	@return success: 0 | false: -1
  * */
-
 int V4l2Device::configureFormat(int fd)
 {
 	/* get current configuration */
