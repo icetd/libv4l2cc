@@ -78,11 +78,11 @@ bool V4l2MmapDevice::start()
 				}
 				//Save the first address of user space after mapping
 				m_buffer[n_buffers].start = mmap(NULL,
-											m_buffer[n_buffers].length, 
-											PROT_READ | PROT_WRITE,
-											MAP_SHARED,
-											m_fd,
-											buf.m.offset);
+						m_buffer[n_buffers].length, 
+						PROT_READ | PROT_WRITE,
+						MAP_SHARED,
+						m_fd,
+						buf.m.offset);
 				
 				if (MAP_FAILED == m_buffer[n_buffers].start) {
 					perror("mmap");

@@ -14,10 +14,10 @@
 std::string V4l2Device::fourcc(uint32_t format) 
 {
 	char formatArray[] = {	(char)(format & 0xff), 
-							(char)((format >> 8 ) & 0xff), 
-							(char)((format >> 16) & 0xff), 
-							(char)((format >> 24) & 0xff), 
-							0 };
+		(char)((format >> 8 ) & 0xff), 
+		(char)((format >> 16) & 0xff), 
+		(char)((format >> 24) & 0xff), 
+		0 };
 	return std::string (formatArray, strlen(formatArray));
 }
 
