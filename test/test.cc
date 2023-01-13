@@ -1,4 +1,5 @@
 #include <cerrno>
+#include <cstdio>
 #include <cstring>
 #include <fcntl.h>
 #include <linux/videodev2.h>
@@ -6,6 +7,7 @@
 #include <V4l2Device.h>
 #include <V4l2Capture.h>
 #include <signal.h>
+#include <unistd.h>
 
 int LogLevel;
 int stop = 0;
@@ -21,12 +23,12 @@ int main()
 	const char *in_devname = "/dev/video0";	
 	v4l2IoType ioTypeIn  = IOTYPE_MMAP;
 	int format = 0;
-	int width = 640;
-	int height = 480;
-	int fps = 10;
+	int width = 1920;
+	int height = 1080;
+	int fps = 30;
 	
 	initLogger(INFO);
-	V4L2DeviceParameters param(in_devname, V4L2_PIX_FMT_YUYV, width, height, fps, ioTypeIn, DEBUG);
+	V4L2DeviceParameters param(in_devname, V4L2_PIX_FMT_MJPEG, width, height, fps, ioTypeIn, DEBUG);
 	V4l2Capture *videoCapture = V4l2Capture::create(param);
 	
 	if (videoCapture == nullptr) {
@@ -58,6 +60,7 @@ int main()
 
 		delete videoCapture;
 	}
+
 	LOG(INFO, "=============test=============");
 	return 0;
 }
