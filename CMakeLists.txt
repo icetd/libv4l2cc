@@ -30,9 +30,9 @@ add_executable(${PROJECT_NAME}_test test/test.cc)
 target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME})
 
 # out set
-set (OUT_BIN ${CMAKE_BINARY_DIR}/lib)
-set (OUT_LIB ${CMAKE_BINARY_DIR}/lib)
-set (OUT_INC ${CMAKE_BINARY_DIR}/include)
+set (OUT_BIN ${CMAKE_BINARY_DIR}/target/lib)
+set (OUT_LIB ${CMAKE_BINARY_DIR}/target/lib)
+set (OUT_INC ${CMAKE_BINARY_DIR}/target/include)
 
 
 set_target_properties(${PROJECT_NAME}
