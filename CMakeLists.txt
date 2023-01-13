@@ -19,11 +19,11 @@ include_directories(
 message("${INC_FILES}")
 
 add_library(${PROJECT_NAME}_static STATIC ${SRC_FILES})
-set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "${PROJECT_NAME}")
+set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME "v4l2cc")
 set_target_properties(${PROJECT_NAME}_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
-set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${PROJECT_NAME}")
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "v4l2cc")
 set_target_properties(${PROJECT_NAME} PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 add_executable(${PROJECT_NAME}_test test/test.cc)
 
@@ -50,4 +50,3 @@ add_custom_target(copy_files ALL
                   "${CMAKE_SOURCE_DIR}/inc"
                   "${OUT_INC}"
 )
-
