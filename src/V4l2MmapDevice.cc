@@ -1,6 +1,3 @@
-#include <bits/stdint-uintn.h>
-#include <cstddef>
-#include <cstdio>
 #include <linux/videodev2.h>
 #include <string.h>
 #include <sys/ioctl.h>

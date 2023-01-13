@@ -1,5 +1,3 @@
-#include <cstddef>
-#include <ctime>
 #include <string.h>
 #include "V4l2Access.h"
 #include "V4l2Device.h"

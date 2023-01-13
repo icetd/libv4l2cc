@@ -1,6 +1,4 @@
 #include "log.h"
-#include <bits/stdint-uintn.h>
-#include <bits/types/error_t.h>
 #include <cerrno>
 #include <fcntl.h>
 #include <linux/videodev2.h>

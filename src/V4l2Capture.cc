@@ -1,7 +1,6 @@
 #include <linux/videodev2.h>
 #include <sys/select.h>
 #include <sys/types.h>
-
 #include "V4l2Device.h"
 #include "log.h"
 #include "V4l2Capture.h"
