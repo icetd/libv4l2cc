@@ -30,7 +30,7 @@ V4l2MmapDevice::~V4l2MmapDevice()
 
 bool V4l2MmapDevice::start()
 {
-	LOG(NOTICE, "Device %s", m_params.m_devName.c_str());
+	LOG(NOTICE, "Device %s Mmap Start", m_params.m_devName.c_str());
 
 	bool success = true;
 	
