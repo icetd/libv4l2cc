@@ -113,7 +113,7 @@ bool V4l2MmapDevice::start()
 
 bool V4l2MmapDevice::stop()
 {
-	LOG(NOTICE, "Device %s", m_params.m_devName.c_str());
+	LOG(NOTICE, "Device %s Mmap Stop", m_params.m_devName.c_str());
 	
 	bool success = true;
 
