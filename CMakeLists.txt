@@ -5,15 +5,15 @@ set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_BUILD_TYPE Debug)
 
 file(GLOB_RECURSE SRC_FILES
-	"${CMAKE_SOURCE_DIR}/src/*.cc"
+	"${CMAKE_CURRENT_LIST_DIR}/src/*.cc"
 )
 
 file (GLOB_RECURSE INC_FILES
-	"${CMAKE_SOURCE_DIR}/inc/*.h"
+	"${CMAKE_CURRENT_LIST_DIR}/inc/*.h"
 )
 
 include_directories(
-	"${CMAKE_SOURCE_DIR}/inc"
+	"${CMAKE_CURRENT_LIST_DIR}/inc"
 )
 
 message("${INC_FILES}")
