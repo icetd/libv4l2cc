@@ -47,6 +47,6 @@ add_custom_target(copy_files ALL
 	COMMAND ${CMAKE_COMMAND} -E make_directory "${OUT_INC}"
 	COMMAND ${CMAKE_COMMAND} -E
                   copy_directory
-                  "${CMAKE_SOURCE_DIR}/inc"
+                  "${CMAKE_CURRENT_LIST_DIR}/inc"
                   "${OUT_INC}"
 )
